@@ -1,0 +1,21 @@
+* How do I use it?
+  - edit the configuration in the flaskr.py file or
+    export an FLASKR_SETTINGS environment variable
+    pointing to a configuration file.
+
+  - install the app from the root of the project directory
+
+    pip install -r requirements.txt
+
+  - initialize the database with this command:
+    cd WebSite/
+    python pyuio.py db init
+    python pyuio.py db migrate
+    python pyuio.py db upgrade
+
+  - now you can run WebSite:
+
+    python pyuio.py runserver
+
+    the application will greet you on
+    http://localhost:5000/
