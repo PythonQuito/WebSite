@@ -51,7 +51,7 @@ class Widgets(db.Model):
 @app.route('/')
 def show():
     widgets = Widgets.query.all()
-    return render_template('widgets.jinja2', entries=widgets)
+    return render_template('pythonuio.jinja2', entries=widgets)
 
 
 @app.route('/add', methods=['POST', 'GET'])

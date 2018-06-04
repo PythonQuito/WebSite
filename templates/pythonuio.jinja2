@@ -1,0 +1,64 @@
+{% extends "base.jinja2" %}
+{% block body %}
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card clearfix">
+                        <div class="card-header">
+                            Contactos:
+                        </div>
+                        <div class="card-body">
+                            Encuetranos en:<br>
+                            <a href="https://t.me/pythonecuador">Telegram</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="card clearfix">
+                        <div class="card-header">
+                            Eventos:
+                        </div>
+                        <div class="card-body">
+                            <div id="event_list"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="card clearfix">
+                        <div class="card-header">
+                            Proyectos:
+                        </div>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3" style="text-align: center">
+            <div class="row">
+                <a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/py_ec?ref_src=twsrc%5Etfw">Tweets by py_ec</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="row">
+                <div class="fb-page" data-href="https://www.facebook.com/pyecuador/" data-tabs="timeline" data-width="350" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pyecuador/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pyecuador/">Python Ecuador</a></blockquote></div>
+            </div>
+        </div>
+
+    </div>
+
+    <ul class="entries">
+        {% for entry in entries %}
+            <li>
+                <h2>{{ entry.title }}</h2>
+                {{ entry.content|safe }}
+            </li>
+        {% else %}
+            <li><em>Unbelievable.  No entries here so far</em></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

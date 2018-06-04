@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>PyUIO</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logoquito.png') }}" sizes="96x96">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap4/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pythonuio/pythonuio.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<nav class="navbar navbar-dark header-pyo">
+    <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='images/logoquito.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Python Quito
+    </a>
+</nav>
+
+<div class="container-fluid">
+    {% block body %}{% endblock %}
+    <div class="card clearfix">
+        {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer class="clearfix" style="background-color: #646464; height: 50px; color: white; vertical-align: top;text-align: center; vertical-align: middle">
+Hecho con <3 y Software Libre
+</footer>
+</body>
+</html>
