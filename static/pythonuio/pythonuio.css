@@ -4,3 +4,14 @@
   margin-bottom: 5px;
   border-bottom: .5rem solid #FFD43B;
 }
+
+footer {
+  list-style-type: none;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  background-color: #306998;
+  text-align: center;
+}

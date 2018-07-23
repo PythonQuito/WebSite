@@ -3,52 +3,82 @@
 
 
     <div class="row">
+        <!-- Columna izquierda-->
         <div class="col-lg-9">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card clearfix">
+                    <div class="card">
                         <div class="card-header">
-                            Contactos:
+                            Python Quito
                         </div>
                         <div class="card-body">
-                            Encuetranos en:<br>
-                            <a href="https://t.me/pythonecuador">Telegram</a>
+                            Somos una comunidad que tiene como objetivo reunir personas con el mismo interés.<br>
+                            Programadores, entusiastas y curiosos nos reunimos para lograr algo grande teniendo como base este gran lenguaje de programación como lo es python.<br>
+                            Así que, si estas interesado te invitamos a unirtemos, puedes encontrar los eventos que hemos y vamos a realizar en la parte de abajo.<br>
+                            Bienvenido.
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-6">
-                    <div class="card clearfix">
-                        <div class="card-header">
-                            Eventos:
+                <div class="col-lg-12">
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-header">
+                                Eventos:
+                            </div>
+                            <div class="card-body">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{ url_for('static', filename='images/pythonquitov2.png') }}">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">PyMeetups</div>
+                                    <div class="card-text">
+                                        Son un conjunto de reuniones que realizamos la comunidad cada 3 semanas.<br>
+                                        El objetivo de estas reuniones es conocernos, compartir, programar y comer pizza.<br>
+                                        Te puedes enterar de las reuniones visitando nuestro canal de <a href="https://t.me/pythonecuador">Telegram</a> en python ecuador.<br>
+                                        Además puedes seguir los eventos que realizamos tanto Python Quito, como Python Ecuador <a href="https://meetup.com/python-ecuador/">aquí</a>.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div id="event_list"></div>
-                        </div>
-                    </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Proyectos:
+                            </div>
+                            <div class="card-body">
+                                <div class="card">
+                                    <img  class="card-img-top" src="{{ url_for('static', filename='images/github.png') }}"/>
+                                </div>
+                                    <div class="card-body">
+                                        <div class="card-title">Github:</div>
+                                        <div class="card-text">
+                                            La comunidad trabajamos en proyectos abiertos.<br>
+                                            Puedes revisar nuestro <a href="https://github.com/PythonQuito">github</a> para mas información al respecto.<br>
+                                            Y al ser abiertos puedes apoyarnos.
+                                        </div>
+                                    </div>
 
-                </div>
-                <div class="col-lg-6">
-                    <div class="card clearfix">
-                        <div class="card-header">
-                            Proyectos:
-                        </div>
-                        <div class="card-body">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Columna derecha -->
+
         <div class="col-lg-3" style="text-align: center">
             <div class="row">
-                <a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/py_ec?ref_src=twsrc%5Etfw">Tweets by py_ec</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" data-width="100%" data-height="250" href="https://twitter.com/py_ec?ref_src=twsrc%5Etfw">Tweets by py_ec</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            <div class="row">
-                <div class="fb-page" data-href="https://www.facebook.com/pyecuador/" data-tabs="timeline" data-width="350" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pyecuador/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pyecuador/">Python Ecuador</a></blockquote></div>
+            <div class="row" >
+                <div style="width: 100%; margin-left: auto; margin-right: auto">
+                    <div class="fb-page" style="text-align: center" data-href="https://www.facebook.com/pyecuador/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pyecuador/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pyecuador/">Python Ecuador</a></blockquote></div>
+                </div>
             </div>
         </div>
 
     </div>
+
 
     <ul class="entries">
         {% for entry in entries %}
@@ -57,7 +87,7 @@
                 {{ entry.content|safe }}
             </li>
         {% else %}
-            <li><em>Unbelievable.  No entries here so far</em></li>
+
         {% endfor %}
     </ul>
 
